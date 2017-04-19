@@ -74,6 +74,7 @@ train <- subset(sparseWords, split == T)
 test <- subset(sparseWords, split == F)
 
 # Support Vector Machine Model
+library(e1071)
 svm.model <- svm(label ~ ., data = train, kernel = "linear", cost = 0.1, gamma = 0.1)
 svm.predict <- predict(svm.model, test)
 table(test$label, svm.predict) # Confusion matrix
