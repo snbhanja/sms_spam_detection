@@ -85,3 +85,19 @@ print(paste("SVM accuracy:",
             "%"))
 
 # Got "SVM accuracy: 96.55 %"
+
+# Word Cloud
+library(wordcloud)
+
+bag <- TermDocumentMatrix(bag)
+bag <- as.matrix(bag)
+bag <- sort(rowSums(bag), decreasing = T)
+bag.df <- data.frame(word = names(bag), freq = bag)
+
+set.seed(154)
+str(bag)
+
+wordcloud(words = bag.df$word, freq = bag.df$freq, min.freq = 100,
+          max.words=1500, random.order=FALSE, rot.per=0.25,
+          colors=brewer.pal(8, "Dark2"),
+          scale = c(0.5,3))
