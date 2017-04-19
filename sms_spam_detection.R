@@ -103,4 +103,5 @@ wordcloud(words = bag.df$word, freq = bag.df$freq, min.freq = 100,
           scale = c(0.5,3))
 
 # References:
+# https://github.com/arathee2/SPAM-SMS-Classifier
 # https://www.kaggle.com/arathee2/d/uciml/sms-spam-collection-dataset/predicting-if-spam-non-spam
