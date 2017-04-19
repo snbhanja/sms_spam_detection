@@ -101,3 +101,6 @@ wordcloud(words = bag.df$word, freq = bag.df$freq, min.freq = 100,
           max.words=1500, random.order=FALSE, rot.per=0.25,
           colors=brewer.pal(8, "Dark2"),
           scale = c(0.5,3))
+
+# References:
+# https://www.kaggle.com/arathee2/d/uciml/sms-spam-collection-dataset/predicting-if-spam-non-spam
